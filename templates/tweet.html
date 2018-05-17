@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <table width="100%">
+          <thead>
+              <tr>
+                  <th>S.NO</th>
+                  <th>Tweet</th>
+              </tr>
+          </thead>
+
+          <tbody>
+            {% for tweet in alltweets %}
+              <tr>
+                  <td>{{ forloop.counter }}</td>
+                  <td>{{tweet.full_text}}</td><!--What to put here ?-->
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+      <a href="{% url 'map' %}"> Map </a>
+</body>
+</html>
